@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subida de Archivos a S3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Subida de Archivos a S3</h1>
+        <form id="uploadForm">
+            <label for="accessKeyId">Access Key ID:</label>
+            <input type="text" id="accessKeyId" required>
+            <label for="secretAccessKey">Secret Access Key:</label>
+            <input type="password" id="secretAccessKey" required>
+            <button type="button" id="loadBucketsButton">Cargar Buckets</button>
+            <label for="bucketName">Bucket Name:</label>
+            <select id="bucketName" required></select>
+            <label for="directoryPath">Directorio:</label>
+            <select id="directoryPath" required></select>
+            <label for="fileUpload">Archivo:</label>
+            <input type="file" id="fileUpload" required>
+            <button type="submit">Subir Archivo</button>
+        </form>
+        <div id="resultMessage"></div>
+    </div>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
